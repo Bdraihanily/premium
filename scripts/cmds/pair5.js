@@ -569,7 +569,7 @@ module.exports = {
 
     onStart: async function ({ api, event, message, usersData }) {
         const startTime = Date.now();
-        const processingMessage = await message.reply("💖 Calculating your best match..");
+        const processingMessage = await message.reply("💖 Creating premium ship card...");
 
         try {
             let user1ID, user2ID;
@@ -714,7 +714,7 @@ module.exports = {
             fs.writeFileSync(outputPath, buffer);
 
             await message.reply({
-                body: `💖 COMPATIBILITY RESULT 💖\n\n` +
+                body: `💖 PREMIUM COMPATIBILITY RESULT 💖\n\n` +
                       `👤 ${name1.toUpperCase()} + 👤 ${name2.toUpperCase()} = 💞 ${shipName}\n` +
                       `📊 ${percentage}% MATCH\n` +
                       `💌 ${sweetMessage}\n` +
